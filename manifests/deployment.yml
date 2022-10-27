@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: hailugebrupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hailugebrupipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: hailugebrupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: hailugebrupipelinesjavascriptdocker 
+          image: myappdelete.azurecr.io/hailugebrupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
